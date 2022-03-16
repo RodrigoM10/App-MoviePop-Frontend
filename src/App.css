@@ -1,6 +1,7 @@
 body {
   box-sizing: border-box;
-  color:#18191b;
+  color:#ffffff;
+  background-color: #1F3950;
 }
 .schema-page {
   min-height: 100vh;

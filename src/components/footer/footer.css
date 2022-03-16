@@ -1,0 +1,32 @@
+.footer-top{
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: #f7f7f721;
+    color: white;
+}
+.footer-top-buttom{
+    background-color: rgba(133, 139, 135, 0.452);
+}
+.social-icon {
+    margin: 0 0.2rem;
+    color: whitesmoke !important;
+    width: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.social-icon-top {
+    margin: 0 0.4rem;
+    color: whitesmoke !important;
+    width: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.to-top-btn {
+    font-size: 1.5rem;
+    color:white;
+    text-decoration: none;
+    transition: 0.4s;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
