@@ -7,9 +7,7 @@ const PublicLayout = ({ children }) => {
   return (
     <div className='schema-page'>
       <NavbarMain />
-      <div className='my-auto'>
         {children}
-      </div>
       <Footer />
     </div>
   );

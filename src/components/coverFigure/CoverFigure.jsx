@@ -5,7 +5,7 @@ import IMG_HOME from '../../assets/cinema.png';
 
 const CoverFigure = () => {
     return (
-        <Figure className="d-flex flex-column justify-content-center aling-items-center ">
+        <Figure className=" d-flex flex-column justify-content-center aling-items-center ">
             <Figure.Image
                 alt="img-home"
                 src={IMG_HOME}

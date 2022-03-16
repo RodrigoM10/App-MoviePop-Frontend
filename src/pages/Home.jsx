@@ -5,7 +5,7 @@ import CoverFigure from '../components/coverFigure/CoverFigure';
 function Home() {
 
     return (
-        <Container className=" d-flex justify-content-center aling-items-center">        
+        <Container className="my-auto d-flex justify-content-center aling-items-center">        
              <CoverFigure />
         </Container>
     )
