@@ -5,13 +5,13 @@ import './footer.css'
 
 
 export const Footer = () => {
-    
+
     const scrollToTop = () => {
         window.scrollTo(0, 0);
     };
 
     return (
-        <div className="mt-auto footer-style">
+        <div className=" footer-style">
             <div className="d-flex justify-content-center align-items-center p-3 footer-top">
                 <NavLink href='https://github.com/RodrigoM10' target='_blank' className="p-0 mx-1">
                     <FaGithub className="social-icon-top" />
