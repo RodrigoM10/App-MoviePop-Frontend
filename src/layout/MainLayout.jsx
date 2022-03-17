@@ -2,7 +2,7 @@ import React from 'react';
 import { Footer } from '../components/footer/Footer';
 import { NavbarMain } from '../components/navbarMain/NavbarMain';
 
-const PublicLayout = ({ children }) => {
+const MainLayout = ({ children }) => {
 
   return (
     <div className='schema-page'>
@@ -13,4 +13,4 @@ const PublicLayout = ({ children }) => {
   );
 };
 
-export default PublicLayout;
+export default MainLayout;

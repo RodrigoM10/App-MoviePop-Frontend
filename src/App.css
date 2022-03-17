@@ -4,10 +4,13 @@ body {
   box-sizing: border-box;
   color:#ffffff;
   background-color: #1F3950;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif !important;
 }
 .schema-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+h2, h5 {
+   font-weight: 600 !important;
 }

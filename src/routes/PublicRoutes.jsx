@@ -1,17 +1,19 @@
 import React from 'react';
-import {  Route, Routes } from 'react-router-dom';
-import PublicLayout from '../layout/PublicLayout'
+import { Route, Routes } from 'react-router-dom';
+import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Home';
+import MovieDetails from '../pages/MoviesDetails';
 import SearchPage from '../pages/SearchPage';
 
 function PublicRoutes() {
     return (
-            <PublicLayout>
-                <Routes>
-                    <Route  path="/" element={<Home />} />
-                    <Route  path="/searchPage" element={<SearchPage />} />
-                </Routes>
-            </PublicLayout>
+            <MainLayout>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/searchPage" element={<SearchPage />} />
+                <Route path="/movieDetails/:movieId" element={<MovieDetails />} />
+              </Routes>
+            </MainLayout>
     );
 }
 

@@ -6,7 +6,7 @@ const SearchForm = () => {
     return (
         <Form
             className=" d-flex justify-content-center align-items-center mx-2"
-            autocomplete="off"
+            autoComplete="off"
         >
             <input
                 name="searchMovie"
