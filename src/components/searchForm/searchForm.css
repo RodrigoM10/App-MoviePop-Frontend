@@ -1,0 +1,21 @@
+.search-input {
+    width: 80%;
+    padding: 0.5rem;
+    background-color: #294056;
+    color: white !important;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.search-input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem #dbf6ff !important;
+    background-color: #294056;
+}
+
+::-webkit-input-placeholder { 
+    color:rgb(255, 255, 255); 
+    font-weight: 400;
+    background-color: transparent;
+}

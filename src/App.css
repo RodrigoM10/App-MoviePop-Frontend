@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Nunito:ital@0;1&display=swap');
+
 body {
   box-sizing: border-box;
   color:#ffffff;
   background-color: #1F3950;
+  font-family: 'Nunito', sans-serif;
 }
 .schema-page {
   min-height: 100vh;
