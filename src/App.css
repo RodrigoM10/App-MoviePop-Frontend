@@ -14,3 +14,11 @@ body {
 h2, h5 {
    font-weight: 600 !important;
 }
+
+/* Spinner */
+.center-spinner {
+  top: 50vh;
+  left: 50%;
+}.center-spinner  div {
+  margin-left: -50%;
+}

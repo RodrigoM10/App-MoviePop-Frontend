@@ -4,6 +4,12 @@
     background-color: transparent !important;
     border: transparent !important;
 }
+
+.card-img-style {
+    max-height: 320px !important;
+    min-width: 11rem !important;
+}
+
 .card-title-movie {
     color: white !important;
     text-align: end;

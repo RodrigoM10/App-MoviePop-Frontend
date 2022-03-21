@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container } from 'react-bootstrap';
 import Movies from '../components/movies/Movies';
 import SearchForm from '../components/searchForm/SearchForm';
 
 
 function SearchPage() {
+    const [movieParam, setMovieParam] = useState('star wars') 
 
     return (
         <Container className=" d-flex flex-column">        
-            <SearchForm />
+            <SearchForm setMovieParam={setMovieParam}/>
             <h2 className='mt-4'>Películas</h2>
             <hr />
-            <Movies />
+            <Movies movieParam={movieParam} />
         </Container>
     )
 }
