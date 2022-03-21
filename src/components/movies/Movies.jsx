@@ -6,7 +6,7 @@ import CardNoResults from '../cardNoResults/CardNoResult'
 import SpinLoader from '../spinLoader/SpinLoader'
 
 const Movies = ({movieParam}) => {
-    const [allMovies, isLoadingAllMovies] = useRequestMovies(movieParam)
+    const [allMovies, isLoading] = useRequestMovies(movieParam)
 
     return (
         <div className="my-3">
@@ -15,15 +15,14 @@ const Movies = ({movieParam}) => {
                     <CardMovie key={mov.show?.id} movie={mov} />
                 ))}
             </Row>
-            {!allMovies.length && !isLoadingAllMovies && (
+            {!allMovies.length && !isLoading && (
                 <div className="d-flex justify-content-center align-items-center">
                     <CardNoResults />
                 </div>
             )}
             <div className="position-absolute center-spinner">
-                {<SpinLoader size="lg" isLoading={isLoadingAllMovies} />}
+                {<SpinLoader size="lg" isLoading={isLoading} />}
             </div>
-
         </div>
     )
 }

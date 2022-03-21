@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllMovies, getMovies } from "../services/moviesService";
+import { getMovie, getMovies } from "../services/moviesService";
 
 export function useRequestMovies(movieParam) {
     const [data, setData] = useState([]);
@@ -22,14 +22,14 @@ export function useRequestMovies(movieParam) {
 }
 
 
-export function useRequestAllMovies(pageParam) {
+export function useRequestMovieById(id) {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
       (async function () {
           setIsLoading(true);
-          const {error, data} = await getAllMovies(pageParam);
+          const {error, data} = await getMovie(id);
           if ( data ) {
               setData(data);
           } else {

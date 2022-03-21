@@ -11,7 +11,6 @@ function App() {
       <Routes>
         <Route path="/*" element={<PublicRoutes />} />
         <Route path="/404" element={<NoMatch />} />
-        {/* <Route path="/backoffice" render={() => <BackofficeLayout/>} /> */}
       </Routes>
     </BrowserRouter>
   );

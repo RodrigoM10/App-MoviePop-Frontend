@@ -8,9 +8,9 @@ const getMovies = async (movieParam) => {
     return {data: data, error}
 }
 
-const getAllMovies = async (pageParam) => {
-    const {data, error} = await Get(ENDPOINT_ALL_SHOWS,{params: { page: pageParam}});
+const getMovie = async (id) => {
+    const {data, error} = await Get(`${ENDPOINT_ALL_SHOWS}/${id}`);
     return {data: data, error}
 }
 
-export {getMovies, getAllMovies};
+export {getMovies, getMovie};
