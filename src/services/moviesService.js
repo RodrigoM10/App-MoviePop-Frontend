@@ -1,4 +1,4 @@
-import { Get } from "./apiService"
+import { Get } from "./apiPublicService"
 
 const ENDPOINT_SERACH_SHOWS = '/search/shows'
 const ENDPOINT_ALL_SHOWS = '/shows'

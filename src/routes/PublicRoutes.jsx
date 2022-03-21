@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import {  Route, Routes } from 'react-router-dom';
+import { LoginForm } from '../components/auth/LoginForm';
+import { RegisterForm } from '../components/auth/RegisterForm';
 import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Home';
 import MovieDetails from '../pages/MoviesDetails';
@@ -12,6 +14,8 @@ function PublicRoutes() {
                 <Route path="/" element={<Home />} />
                 <Route path="/searchPage" element={<SearchPage />} />
                 <Route path="/movieDetails/:movieId" element={<MovieDetails />} />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/register" element={<RegisterForm />} />
               </Routes>
             </MainLayout>
     );

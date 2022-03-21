@@ -18,4 +18,5 @@ const Get = async (endpoint, parameter) => {
     return response;
 };
 
-export {Get};
+
+export { Get };
