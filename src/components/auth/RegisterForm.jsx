@@ -28,7 +28,6 @@ export const RegisterForm = () => {
             const submitFunction = async () => {
                 try {
                     await postAuthRegister(values);
-                    console.log("🚀 ~ file: RegisterForm.jsx ~ line 31 ~ submitFunction ~ values", values)
                     SuccessAlert(`¡¡ Excelente !!`, REGISTER_SUCCESSFULL);
                     formik.resetForm();
                     window.location.href = '/login';
