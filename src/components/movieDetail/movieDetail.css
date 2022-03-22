@@ -1,16 +1,19 @@
 .detail-movie-image{
   width: 20rem;
 }
+
 .star-ratings {
   position: absolute;
   background-color: #070707a8;
   border-radius: 5px;
   padding: 0.2rem;
 }
+
 .list-movie-details{
     list-style: none;
     padding: 0 1.5rem !important;
 }
+
 .summary-movie-detail {
     padding: 0 1.5rem !important;
     text-align: justify !important;

@@ -1,9 +1,9 @@
 import React from 'react'
-import GoogleLogin from 'react-google-login';
 import { useDispatch } from 'react-redux';
-import { INCORRECT_DATA, LOGIN_SUCCESSFULL, UNKNOWN_ERROR, API_ERROR } from '../../helpers/messagesText';
 import { ErrorAlert, SuccessAlert } from '../alert/SweetAlert';
+import { INCORRECT_DATA, LOGIN_SUCCESSFULL, UNKNOWN_ERROR, API_ERROR } from '../../helpers/messagesText';
 import { getLogin } from '../../reducers/auth/actions';
+import GoogleLogin from 'react-google-login';
 
 const LoginGoogle = () => {
   const dispatch = useDispatch();

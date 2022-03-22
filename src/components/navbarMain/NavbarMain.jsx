@@ -7,10 +7,10 @@ import { BiLogOutCircle } from 'react-icons/bi';
 import { getLogout } from '../../reducers/auth/actions';
 import { selectAuth } from '../../reducers/auth/authReducer';
 import './navbarMain.css'
+
 export const NavbarMain = () => {
 
   const isAuthenticated = useSelector(selectAuth);
- 
 
   const dispatch = useDispatch();
 
@@ -26,11 +26,11 @@ export const NavbarMain = () => {
   return (
     <Navbar variant="dark" className="navbar-style" expand="lg" >
       <Container >
-        <NavDropdown 
-          className="d-inline d-lg-none  " 
-          title={<FaUserAlt  className="icon-fa-user"/>} 
+        <NavDropdown
+          className="d-inline d-lg-none  "
+          title={<FaUserAlt className="icon-fa-user" />}
           id="basic-nav-dropdown"
-           >
+        >
           <NavDropdown.Item className="navbar-links-dropdown">
             <Nav.Link as={NavLink} to="/login" activeclassname="link-active">Login</Nav.Link>
           </NavDropdown.Item>
@@ -40,10 +40,10 @@ export const NavbarMain = () => {
           </NavDropdown.Item>
         </NavDropdown>
         <Nav className="d-none d-lg-flex justify-content-center align-items-center">
-          {isAuthenticated ? 
-              <Nav.Link as={NavLink} to="/" onClick={(e) => handleLogout(e)} activeclassname="link-active">Logut <BiLogOutCircle/></Nav.Link>
-          
-          : <>
+          {isAuthenticated ?
+            <Nav.Link as={NavLink} to="/" onClick={(e) => handleLogout(e)} activeclassname="link-active">Logut <BiLogOutCircle /></Nav.Link>
+
+            : <>
               <Nav.Link as={NavLink} to="/login" activeclassname="link-active">Login</Nav.Link>
               /
               <Nav.Link as={NavLink} to="/register" activeclassname="link-active">Register</Nav.Link>

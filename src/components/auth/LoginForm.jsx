@@ -1,17 +1,17 @@
 import React from 'react'
-import * as yup from 'yup';
-import { useDispatch } from 'react-redux';
-import { yupEmail, yupPassword } from '../../helpers/yupFormValidations';
-import { useFormik } from 'formik';
-import { API_ERROR, INCORRECT_DATA, LOGIN_SUCCESSFULL, UNKNOWN_ERROR } from '../../helpers/messagesText';
-import { ErrorAlert, SuccessAlert } from '../alert/SweetAlert';
-import { Container } from 'react-bootstrap';
-import { Button, TextField } from '@mui/material';
-import { getLogin } from '../../reducers/auth/actions';
-import { postAuthLogin } from '../../services/authService';
-import './authForm.css'
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Container } from 'react-bootstrap';
+import * as yup from 'yup';
+import { useFormik } from 'formik';
+import { Button, TextField } from '@mui/material';
+import { ErrorAlert, SuccessAlert } from '../alert/SweetAlert';
+import { yupEmail, yupPassword } from '../../helpers/yupFormValidations';
+import { API_ERROR, INCORRECT_DATA, LOGIN_SUCCESSFULL, UNKNOWN_ERROR } from '../../helpers/messagesText';
+import { postAuthLogin } from '../../services/authService';
+import { getLogin } from '../../reducers/auth/actions';
 import LoginGoogle from './LoginGoogle';
+import './authForm.css'
 
 export const LoginForm = () => {
 
@@ -86,7 +86,7 @@ export const LoginForm = () => {
                 <Link to='/register' className='text-decoration-none text-white'>¿ Aun no estas registrado ?</Link>
             </div>
             <div className="my-3">
-               <LoginGoogle/>
+                <LoginGoogle />
             </div>
         </Container>
     )

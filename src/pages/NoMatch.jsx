@@ -1,10 +1,9 @@
 import React from 'react'
+import CardNoResults from '../components/cardNoResults/CardNoResult'
 
 function NoMatch() {
     return (
-        <div>
-            Nada para ver aqui.
-        </div>
+        <CardNoResults textNoResult='Nada para ver aqui' />
     )
 }
 

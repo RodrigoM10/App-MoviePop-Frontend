@@ -6,16 +6,17 @@ body {
   background-color: #1F3950;
   font-family: 'Nunito', sans-serif !important;
 }
+
 .schema-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
 h1, h2, h4, h5 {
    font-weight: 600 !important;
 }
 
-/* Spinner */
 .center-spinner {
   top: 50vh;
   left: 50%;

@@ -1,7 +1,8 @@
-.form-login{
+.form-login {
     width: 80%;
     margin: 2rem auto;
 }
+
 .form-input {
     margin: 1rem !important;
     border-radius: 0.3rem !important;
@@ -9,9 +10,11 @@
     outline: 0;
     background-color: #294056;
 }
+
 .form-input:hover {
     border: none !important;
 }
+
 .form-button {
     width: 100%;
     border-radius: 0 !important;
@@ -33,4 +36,3 @@
     padding: 15px 10px !important;
     color: white !important;
 }
-

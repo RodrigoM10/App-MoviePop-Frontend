@@ -2,15 +2,19 @@
   color: white;
   height: 10vh;
 }
+
 .navbar-links {
   font-size: 1.7rem;
 }
+
 .navbar-links-dropdown {
   font-size: 1.3rem;
 }
+
 .navbar-dark .navbar-nav .nav-link.active {
   color: #c48900 !important;
 }
+
 .icon-fa-user {
   font-size: 1.5rem;
   color: white;

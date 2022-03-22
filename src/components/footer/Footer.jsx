@@ -5,7 +5,7 @@ import './footer.css'
 
 
 export const Footer = () => {
-    
+
     const scrollToTop = () => {
         window.scrollTo(0, 0);
     };

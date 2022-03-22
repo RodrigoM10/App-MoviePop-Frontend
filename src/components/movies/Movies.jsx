@@ -1,11 +1,11 @@
 import React from 'react'
 import { Row } from 'react-bootstrap'
-import {  useRequestMovies } from '../../customHooks/useRequestMovies'
+import { useRequestMovies } from '../../customHooks/useRequestMovies'
 import CardMovie from '../cardMovie/CardMovie'
 import CardNoResults from '../cardNoResults/CardNoResult'
 import SpinLoader from '../spinLoader/SpinLoader'
 
-const Movies = ({movieParam}) => {
+const Movies = ({ movieParam }) => {
     const [allMovies, isLoading] = useRequestMovies(movieParam)
 
     return (
@@ -17,7 +17,7 @@ const Movies = ({movieParam}) => {
             </Row>
             {!allMovies.length && !isLoading && (
                 <div className="d-flex justify-content-center align-items-center">
-                    <CardNoResults />
+                    <CardNoResults textNoResult='No hay resultados' />
                 </div>
             )}
             <div className="position-absolute center-spinner">

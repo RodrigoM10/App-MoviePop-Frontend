@@ -7,7 +7,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className='schema-page'>
       <NavbarMain />
-        {children}
+      {children}
       <Footer />
     </div>
   );

@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import * as yup from 'yup';
-import { yupEmail, yupName, yupPassword } from '../../helpers/yupFormValidations';
-import { useFormik } from 'formik';
-import { API_ERROR, REGISTER_SUCCESSFULL, UNKNOWN_ERROR } from '../../helpers/messagesText';
-import { ErrorAlert, SuccessAlert } from '../alert/SweetAlert';
 import { Container } from 'react-bootstrap';
+import * as yup from 'yup';
+import { useFormik } from 'formik';
 import { Button, TextField } from '@mui/material';
+import { ErrorAlert, SuccessAlert } from '../alert/SweetAlert';
+import { yupEmail, yupName, yupPassword } from '../../helpers/yupFormValidations';
+import { API_ERROR, REGISTER_SUCCESSFULL, UNKNOWN_ERROR } from '../../helpers/messagesText';
 import { postAuthRegister } from '../../services/authService';
-import './authForm.css'
 import LoginGoogle from './LoginGoogle';
+import './authForm.css'
 
 export const RegisterForm = () => {
     const validationSchema = yup.object({
@@ -91,7 +91,7 @@ export const RegisterForm = () => {
                 <Link to='/login' className='text-decoration-none text-white'>¿ Ya estas registrado ?</Link>
             </div>
             <div className="my-3">
-                <LoginGoogle/>
+                <LoginGoogle />
             </div>
         </Container>
     )
