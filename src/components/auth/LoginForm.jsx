@@ -31,7 +31,7 @@ export const LoginForm = () => {
             const submitFunction = async () => {
                 try {
                     const response = await postAuthLogin(values);
-                    if (response.data) {
+                    if (response?.data) {
                         const { token } = response.data;
                         const { user } = response.data;
                         dispatch(getLogin({
