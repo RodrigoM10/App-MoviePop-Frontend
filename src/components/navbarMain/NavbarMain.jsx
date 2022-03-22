@@ -31,13 +31,21 @@ export const NavbarMain = () => {
           title={<FaUserAlt className="icon-fa-user" />}
           id="basic-nav-dropdown"
         >
-          <NavDropdown.Item className="navbar-links-dropdown">
-            <Nav.Link as={NavLink} to="/login" activeclassname="link-active">Login</Nav.Link>
-          </NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item className="navbar-links-dropdown">
-            <Nav.Link as={NavLink} to="/register" activeclassname="link-active">Register</Nav.Link>
-          </NavDropdown.Item>
+          {isAuthenticated ?
+            <NavDropdown.Item className="navbar-links-dropdown">
+              <Nav.Link as={NavLink} to="/" onClick={(e) => handleLogout(e)} activeclassname="link-active">Logut <BiLogOutCircle /></Nav.Link>
+            </NavDropdown.Item>
+            : 
+            <>
+              <NavDropdown.Item className="navbar-links-dropdown">
+                <Nav.Link as={NavLink} to="/login" activeclassname="link-active">Login</Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item className="navbar-links-dropdown">
+                <Nav.Link as={NavLink} to="/register" activeclassname="link-active">Register</Nav.Link>
+              </NavDropdown.Item>
+            </>
+          }
         </NavDropdown>
         <Nav className="d-none d-lg-flex justify-content-center align-items-center">
           {isAuthenticated ?

@@ -10,7 +10,9 @@
 .navbar-links-dropdown {
   font-size: 1.3rem;
 }
-
+.navbar-links-dropdown .nav-link {
+  color: #1F3950 !important;
+}
 .navbar-dark .navbar-nav .nav-link.active {
   color: #c48900 !important;
 }
