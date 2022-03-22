@@ -35,4 +35,4 @@ const authReducer = (state = initialState, action) => {
 export default authReducer;
 
 export const selectAuth = (state) => state.authUser.isAuthenticated;
-export const selectUserAuth = (state) => state.authUser.user;
+

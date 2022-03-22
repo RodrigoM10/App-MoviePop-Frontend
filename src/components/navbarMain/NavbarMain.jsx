@@ -6,12 +6,11 @@ import { FaUserAlt, FaArrowLeft, FaHome, FaSearch } from 'react-icons/fa';
 import { BiLogOutCircle } from 'react-icons/bi';
 import { getLogout } from '../../reducers/auth/actions';
 import { selectAuth } from '../../reducers/auth/authReducer';
-import { selectUserAuth } from '../../reducers/auth/authReducer';
 import './navbarMain.css'
 export const NavbarMain = () => {
 
   const isAuthenticated = useSelector(selectAuth);
-  // const currentUser = useSelector(selectUserAuth);  
+ 
 
   const dispatch = useDispatch();
 
