@@ -9,6 +9,7 @@ import { Container } from 'react-bootstrap';
 import { Button, TextField } from '@mui/material';
 import { postAuthRegister } from '../../services/authService';
 import './authForm.css'
+import LoginGoogle from './LoginGoogle';
 
 export const RegisterForm = () => {
     const validationSchema = yup.object({
@@ -90,7 +91,7 @@ export const RegisterForm = () => {
                 <Link to='/login' className='text-decoration-none text-white'>¿ Ya estas registrado ?</Link>
             </div>
             <div className="my-3">
-                <Link to='' className='text-decoration-none text-white'>Ingesá con una cuenta Google</Link>
+                <LoginGoogle/>
             </div>
         </Container>
     )

@@ -9,12 +9,12 @@ const LoginGoogle = () => {
   return (
     <div>
       <GoogleLogin
-        clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+        clientId="99232906142-dao01ahc4sql503tn2tat0uqecrpda7c.apps.googleusercontent.com"
         buttonText="Login"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
         cookiePolicy={'single_host_origin'}
-      />,
+      />
     </div>
   )
 }

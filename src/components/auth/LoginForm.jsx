@@ -11,6 +11,7 @@ import { getLogin } from '../../reducers/auth/actions';
 import { postAuthLogin } from '../../services/authService';
 import './authForm.css'
 import { Link } from 'react-router-dom';
+import LoginGoogle from './LoginGoogle';
 
 export const LoginForm = () => {
 
@@ -85,7 +86,7 @@ export const LoginForm = () => {
                 <Link to='/register' className='text-decoration-none text-white'>¿ Aun no estas registrado ?</Link>
             </div>
             <div className="my-3">
-                <Link to='' className='text-decoration-none text-white'>Ingesá con una cuenta Google</Link>
+               <LoginGoogle/>
             </div>
         </Container>
     )

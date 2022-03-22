@@ -12,7 +12,7 @@ const Movies = ({movieParam}) => {
         <div className="my-3">
             <Row xs={3} lg={5} className="justify-content-evenly">
                 {allMovies?.map((mov) => (
-                    <CardMovie key={mov.show?.id} movie={mov} />
+                    <CardMovie key={mov?.show?.id} movie={mov} />
                 ))}
             </Row>
             {!allMovies.length && !isLoading && (
