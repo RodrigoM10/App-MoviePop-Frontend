@@ -4,6 +4,7 @@ const config = {
   baseURL: process.env.REACT_APP_API_AUTH_URL,
   timeout: 1000,
 };
+
 const instance = axios.create(config);
 
 const Post = async (url, body) => {

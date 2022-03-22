@@ -1,7 +1,7 @@
 import { Get } from "./apiPublicService"
 
-const SERACH_SHOWS_ENDPOINT = process.env.REACT_APP_SEARCH_SHOWS_ENDPOINT
-const SHOWS_ENDPOINT_ = process.env.REACT_APP_SHOWS_ENDPOINT
+const SERACH_SHOWS_ENDPOINT = '/search/shows'
+const SHOWS_ENDPOINT_ = '/shows'
 
 const getMovies = async (movieParam) => {
     const {data, error} = await Get(SERACH_SHOWS_ENDPOINT, {params: { q: movieParam}});

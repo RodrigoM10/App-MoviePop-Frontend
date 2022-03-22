@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import { yupEmail, yupName, yupPassword } from '../../helpers/yupFormValidations';
 import { useFormik } from 'formik';
@@ -8,7 +9,6 @@ import { Container } from 'react-bootstrap';
 import { Button, TextField } from '@mui/material';
 import { postAuthRegister } from '../../services/authService';
 import './authForm.css'
-import { Link } from 'react-router-dom';
 
 export const RegisterForm = () => {
     const validationSchema = yup.object({
@@ -30,6 +30,7 @@ export const RegisterForm = () => {
                     await postAuthRegister(values);
                     SuccessAlert(`¡¡ Excelente !!`, REGISTER_SUCCESSFULL);
                     formik.resetForm();
+                    setTimeout(1000)
                     window.location.href = '/login';
                 } catch (error) {
                     ErrorAlert(UNKNOWN_ERROR, API_ERROR);
