@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { Button, TextField } from '@mui/material';
-import { ErrorAlert, SuccessAlert } from '../alert/SweetAlert';
+import { ErrorAlert, SuccessLoginAlert } from '../alert/SweetAlert';
 import { yupEmail, yupPassword } from '../../helpers/yupFormValidations';
 import { API_ERROR, INCORRECT_DATA, LOGIN_SUCCESSFULL, UNKNOWN_ERROR } from '../../helpers/messagesText';
 import { postAuthLogin } from '../../services/authService';
@@ -14,8 +14,9 @@ import LoginGoogle from './LoginGoogle';
 import './authForm.css'
 
 export const LoginForm = () => {
-
+    
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const validationSchema = yup.object({
         email: yupEmail(),
@@ -39,7 +40,7 @@ export const LoginForm = () => {
                             user: user,
                             token: token
                         }));
-                        SuccessAlert(`Bienvenid@ ${user.name} `, LOGIN_SUCCESSFULL);
+                        SuccessLoginAlert(`Bienvenid@ ${user.name} `, LOGIN_SUCCESSFULL, navigate );
                     } else {
                         ErrorAlert(INCORRECT_DATA);
                     }

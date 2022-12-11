@@ -1,7 +1,7 @@
 import { Post } from "./apiPrivateService";
 
-const LOGIN_ENDPOINT = '/login'
-const REGISTER_ENDPOINT = '/register'
+const LOGIN_ENDPOINT = '/auth/login'
+const REGISTER_ENDPOINT = '/auth/register'
 
 export const postAuthRegister = async (body) => await Post(REGISTER_ENDPOINT, body);
 

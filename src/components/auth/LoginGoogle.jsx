@@ -1,15 +1,19 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { ErrorAlert, SuccessAlert } from '../alert/SweetAlert';
+import { ErrorAlert, SuccessLoginAlert } from '../alert/SweetAlert';
 import { INCORRECT_DATA, LOGIN_SUCCESSFULL, UNKNOWN_ERROR, API_ERROR } from '../../helpers/messagesText';
 import { getLogin } from '../../reducers/auth/actions';
 import GoogleLogin from 'react-google-login';
+import { useNavigate } from 'react-router-dom';
+
+const clientId = process.env.REACT_APP_CLIENT_GOOGLE_ID;
 
 const LoginGoogle = () => {
+
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const responseGoogle = (response) => {
-
+  const onSuccess = (response) => {
     if (response) {
       const { accessToken } = response;
       const { profileObj } = response;
@@ -17,21 +21,26 @@ const LoginGoogle = () => {
         user: profileObj,
         token: accessToken,
       }));
-      SuccessAlert(`Bienvenid@ ${profileObj?.name} `, LOGIN_SUCCESSFULL);
+      SuccessLoginAlert(`Bienvenid@ ${profileObj?.name} `, LOGIN_SUCCESSFULL, navigate);
     } else {
       ErrorAlert(INCORRECT_DATA);
     }
   }
-  const responseFailGoogle =() =>{
-    ErrorAlert(UNKNOWN_ERROR, API_ERROR);
+  const onFailure = () => {
+    try{
+      ErrorAlert(UNKNOWN_ERROR, API_ERROR);
+    } catch{
+      ErrorAlert(UNKNOWN_ERROR, API_ERROR);
+    }
   }
+
   return (
-    <div>
+    <div id="singInButton">
       <GoogleLogin
-        clientId="99232906142-dao01ahc4sql503tn2tat0uqecrpda7c.apps.googleusercontent.com"
+        clientId={clientId}
         buttonText="Login"
-        onSuccess={responseGoogle}
-        onFailure={responseFailGoogle}
+        onSuccess={onSuccess}
+        onFailure={onFailure}
         cookiePolicy={'single_host_origin'}
       />
     </div>

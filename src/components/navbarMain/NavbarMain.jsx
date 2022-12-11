@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { Navigate, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { FaUserAlt, FaArrowLeft, FaHome, FaSearch } from 'react-icons/fa';
@@ -7,16 +7,19 @@ import { BiLogOutCircle } from 'react-icons/bi';
 import { getLogout } from '../../reducers/auth/actions';
 import { selectAuth } from '../../reducers/auth/authReducer';
 import './navbarMain.css'
+import { SuccessLogoutAlert } from '../alert/SweetAlert';
+import LogoutGoogle from '../auth/LogoutGoogle';
 
 export const NavbarMain = () => {
 
   const isAuthenticated = useSelector(selectAuth);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLogout = (e) => {
     e.preventDefault();
-    dispatch(getLogout());
+    SuccessLogoutAlert(dispatch,navigate)
   };
 
   const location = useLocation();
@@ -32,17 +35,17 @@ export const NavbarMain = () => {
           id="basic-nav-dropdown"
         >
           {isAuthenticated ?
-            <NavDropdown.Item className="navbar-links-dropdown">
-              <Nav.Link as={NavLink} to="/" onClick={(e) => handleLogout(e)} activeclassname="link-active">Logut <BiLogOutCircle /></Nav.Link>
+            <NavDropdown.Item className="navbar-links-dropdown"  as={NavLink} to="/" onClick={(e) => handleLogout(e)} activeclassname="link-active">
+              Logut <BiLogOutCircle />
             </NavDropdown.Item>
-            : 
+            :
             <>
-              <NavDropdown.Item className="navbar-links-dropdown">
-                <Nav.Link as={NavLink} to="/login" activeclassname="link-active">Login</Nav.Link>
+              <NavDropdown.Item className="navbar-links-dropdown" as={NavLink} to="/login" activeclassname="link-active">
+                Login
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item className="navbar-links-dropdown">
-                <Nav.Link as={NavLink} to="/register" activeclassname="link-active">Register</Nav.Link>
+              <NavDropdown.Item className="navbar-links-dropdown" as={NavLink} to="/register" activeclassname="link-active">
+                Register
               </NavDropdown.Item>
             </>
           }
@@ -50,7 +53,6 @@ export const NavbarMain = () => {
         <Nav className="d-none d-lg-flex justify-content-center align-items-center">
           {isAuthenticated ?
             <Nav.Link as={NavLink} to="/" onClick={(e) => handleLogout(e)} activeclassname="link-active">Logut <BiLogOutCircle /></Nav.Link>
-
             : <>
               <Nav.Link as={NavLink} to="/login" activeclassname="link-active">Login</Nav.Link>
               /
